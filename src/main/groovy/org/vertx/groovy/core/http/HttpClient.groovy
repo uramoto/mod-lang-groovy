@@ -206,6 +206,18 @@ interface HttpClient extends ClientSSLSupport<HttpClient>, TCPSupport<HttpClient
    * @return true if this client will validate the remote server's certificate hostname against the requested host
    */
   boolean isVerifyHost()
+
+  /**
+   * Set the connect timeout in milliseconds.
+   * @return a reference to this so multiple method calls can be chained together
+   */
+  HttpClient setConnectTimeout(int timeout)
+
+  /**
+   *
+   * @return The connect timeout in milliseconds
+   */
+  int getConnectTimeout()
   
   /**
    * Set if the {@link HttpClient} should try to use compression.

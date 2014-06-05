@@ -186,6 +186,17 @@ class DefaultHttpClient implements HttpClient {
   }
 
   @Override
+  HttpClient setConnectTimeout(int timeout) {
+    jClient.setConnectTimeout(timeout)
+    this
+  }
+
+  @Override
+  int getConnectTimeout() {
+    jClient.getConnectTimeout()
+  }
+
+  @Override
   HttpClient setMaxWebSocketFrameSize(int maxSize) {
     jClient.setMaxWebSocketFrameSize( maxSize )
     this
